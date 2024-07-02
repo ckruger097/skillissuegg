@@ -19,4 +19,16 @@ pub mod tictactoe {
     pub fn play(ctx: Context<Play>, tile: Tile) -> Result<()> {
         play::play(ctx, tile)
     }
+
+    pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
+        bet::deposit(ctx, amount)
+    }
+
+    pub fn withdraw(ctx: Context<Withdraw>) -> Result<()> {
+        bet::withdraw(ctx)
+    }
+
+    pub fn end_game(ctx: Context<EndGame>) -> Result<()> {
+        end_game::end_game(ctx)
+    }
 }
